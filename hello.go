@@ -7,7 +7,7 @@ func main() {
     // x := 1.0
 	// y := 2.0
 
-	x, y := 1.0, 5.0
+	x, y := 12.0, 5.0
 	//z := 3 // unused variable will occure compilation error. 
 
 	if x > 4 {
@@ -18,6 +18,10 @@ func main() {
 
 	if y == 5 || y > 5 {
 		fmt.Println("y is equal to 5 or greater than 5")
+	}
+
+	if frac := x / y; frac > 0.5 {
+		fmt.Println("x is more than half of y")
 	}
 
 	fmt.Printf("x=%v, type of %T\n", x, x)
