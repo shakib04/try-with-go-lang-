@@ -41,6 +41,18 @@ func main() {
 		fmt.Println("unknown")
 	}
 
+	// lesson: switch case with
+	switch  {
+	case n > 1:
+		fmt.Println("greater than one")
+	case n == 1:
+		fmt.Println("equal to one")
+	default:
+		fmt.Println("unknown")
+	}
+
+
+
 	fmt.Printf("x=%v, type of %T\n", x, x)
 	fmt.Printf("y=%v, type of %T\n", y, y)
 
