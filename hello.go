@@ -11,6 +11,12 @@ func main() {
 	x, y := 12.0, 5.0
 	//z := 3 // unused variable will occure compilation error.
 
+	fmt.Printf("x=%v, type of %T\n", x, x)
+	fmt.Printf("y=%v, type of %T\n", y, y)
+
+	mean := (x + y) / 2.0
+	fmt.Printf("result: %v, type of %T\n", mean, mean)
+
 	// lesson: if-else declaration
 	if x > 4 {
 		fmt.Println("x is greater than 4")
@@ -41,8 +47,8 @@ func main() {
 		fmt.Println("unknown")
 	}
 
-	// lesson: switch case with
-	switch  {
+	// lesson: switch case with different approach
+	switch {
 	case n > 1:
 		fmt.Println("greater than one")
 	case n == 1:
@@ -51,11 +57,28 @@ func main() {
 		fmt.Println("unknown")
 	}
 
+	// lesson: for loop
+	for i := 0; i < 5 ; i++{
+		fmt.Println(i)
+		if  i == 2 {
+			break
+		}
+		if i == 1 {
+			continue
+		}
+	}
 
 
-	fmt.Printf("x=%v, type of %T\n", x, x)
-	fmt.Printf("y=%v, type of %T\n", y, y)
+	// lesson: before inializitation and increment
+	a := 0
+	for a < 3{
+		fmt.Println(a)
+		a++
+	}
 
-	mean := (x + y) / 2.0
-	fmt.Printf("result: %v, type of %T\n", mean, mean)
+
+	
+
+
+
 }
