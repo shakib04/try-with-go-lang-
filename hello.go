@@ -5,7 +5,43 @@ import "fmt"
 //import "rsc.io/quote"
 
 func main() {
-	stringBasics()
+	slice()
+}
+
+func slice()  {
+	// similar to list or array
+	loons := []string{"bugs", "daffy", "taz"}
+	fmt.Printf("loons = %v (type %T)\n", loons, loons)
+
+	// 0 indexing
+	fmt.Println(loons[1]) // daffy
+
+	// slices
+	fmt.Println(loons[1:])
+
+	// for
+	for i := 0; i < len(loons); i++ {
+		fmt.Println(loons[i])
+	}
+
+	// single value range
+	for i := range loons {
+		fmt.Println(i)
+	}
+
+	// doubel value range
+	for i, value := range loons {
+		fmt.Printf("%s at %d\n", value, i)
+	}
+
+	// append
+	loons = append(loons, "elmer")
+	fmt.Println(loons) 
+}
+
+
+func evenEndedNumbersChallange()  {
+	// problem is ambigous. Due to this it has not solved yet
 }
 
 func stringBasics() {
