@@ -5,7 +5,39 @@ import "fmt"
 //import "rsc.io/quote"
 
 func main() {
-	fizzBuzzChallange()
+	stringBasics()
+}
+
+func stringBasics() {
+
+	book := "the color of magic"
+	fmt.Println(book)
+
+	//length
+	fmt.Println(len(book))
+
+	// uint8 is a byte
+	fmt.Printf("book[0] = %v (type %T)\n", book[0], book[0])
+
+	// strings in go are immutable ()
+	//book[0] = 116 // this will cause error
+
+	// slice (start, end), 0 based, this is known as a 1/2 empty range
+	fmt.Println(book[4:11])
+
+	// Slice (no end)
+	fmt.Println(book[4:])
+
+	// use + to concatenate strings
+	fmt.Println("T" + book[1:])
+
+	// multi line
+	poem := `
+	the road goes ever on 
+	down from the door where it began
+	`
+	fmt.Println(poem)
+
 }
 
 // print the numbers between 1 and 20, one per line.
@@ -15,13 +47,13 @@ func main() {
 
 func fizzBuzzChallange() {
 	for i := 1; i <= 20; i++ {
-		if i% 3 == 0 && i % 5 == 0 {
-			fmt.Println("fizz buzz");
-		}else if i%3 == 0 {
+		if i%3 == 0 && i%5 == 0 {
+			fmt.Println("fizz buzz")
+		} else if i%3 == 0 {
 			fmt.Println("fizz")
-		}else if i% 5 == 0 {
-				fmt.Println("buzz");
-		}else {
+		} else if i%5 == 0 {
+			fmt.Println("buzz")
+		} else {
 			fmt.Println(i)
 		}
 	}
