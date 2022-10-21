@@ -10,16 +10,20 @@ func main() {
 	x, y := 12.0, 5.0
 	//z := 3 // unused variable will occure compilation error. 
 
+	// lesson: if-else declaration
 	if x > 4 {
 		fmt.Println("x is greater than 4")
 	}else {
 		fmt.Println("x is less or equal to 4")
 	}
 
+	//lesson: or condition
 	if y == 5 || y > 5 {
 		fmt.Println("y is equal to 5 or greater than 5")
 	}
 
+
+	// lesson: assignment and checking
 	if frac := x / y; frac > 0.5 {
 		fmt.Println("x is more than half of y")
 	}
