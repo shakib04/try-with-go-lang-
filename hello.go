@@ -5,6 +5,29 @@ import "fmt"
 //import "rsc.io/quote"
 
 func main() {
+	fizzBuzzChallange()
+}
+
+// print the numbers between 1 and 20, one per line.
+// - if the number is divisible by 3 (for example, 9), print "fizz"
+// - if the number is divisible by 5 (for example, 9), print "buzz"
+// - if the number is divisible by 3 and 5 (for example, 15), print "fizz buzz"
+
+func fizzBuzzChallange() {
+	for i := 1; i <= 20; i++ {
+		if i% 3 == 0 && i % 5 == 0 {
+			fmt.Println("fizz buzz");
+		}else if i%3 == 0 {
+			fmt.Println("fizz")
+		}else if i% 5 == 0 {
+				fmt.Println("buzz");
+		}else {
+			fmt.Println(i)
+		}
+	}
+}
+
+func conditionAndLoopBasic() {
 	// x := 1.0
 	// y := 2.0
 
@@ -58,9 +81,9 @@ func main() {
 	}
 
 	// lesson: for loop
-	for i := 0; i < 5 ; i++{
+	for i := 0; i < 5; i++ {
 		fmt.Println(i)
-		if  i == 2 {
+		if i == 2 {
 			break
 		}
 		if i == 1 {
@@ -68,17 +91,11 @@ func main() {
 		}
 	}
 
-
 	// lesson: before inializitation and increment
 	a := 0
-	for a < 3{
+	for a < 3 {
 		fmt.Println(a)
 		a++
 	}
-
-
-	
-
-
 
 }
