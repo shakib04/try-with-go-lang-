@@ -1,19 +1,20 @@
 package main
 
 import "fmt"
+
 //import "rsc.io/quote"
 
 func main() {
-    // x := 1.0
+	// x := 1.0
 	// y := 2.0
 
 	x, y := 12.0, 5.0
-	//z := 3 // unused variable will occure compilation error. 
+	//z := 3 // unused variable will occure compilation error.
 
 	// lesson: if-else declaration
 	if x > 4 {
 		fmt.Println("x is greater than 4")
-	}else {
+	} else {
 		fmt.Println("x is less or equal to 4")
 	}
 
@@ -22,10 +23,22 @@ func main() {
 		fmt.Println("y is equal to 5 or greater than 5")
 	}
 
-
 	// lesson: assignment and checking
 	if frac := x / y; frac > 0.5 {
 		fmt.Println("x is more than half of y")
+	}
+
+	// lesson: switch case declare
+	n := 2
+	switch n {
+	case 1:
+		fmt.Println("one")
+	case 2:
+		fmt.Println("two")
+	case 3:
+		fmt.Println("three")
+	default:
+		fmt.Println("unknown")
 	}
 
 	fmt.Printf("x=%v, type of %T\n", x, x)
