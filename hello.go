@@ -8,6 +8,14 @@ func main() {
 	mapsBasic()
 }
 
+// count how many times each word appears in a text. This is a very basic step in many text processing alogirthms.
+// To split text to words, use the "Fields" fuction from the "strings" package
+
+func mapsChallange()  {
+	
+}
+
+
 func mapsBasic()  {
 	stocks := map[string]float64{
 		"AMAZON": 2084.98,
