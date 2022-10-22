@@ -5,7 +5,50 @@ import "fmt"
 //import "rsc.io/quote"
 
 func main() {
-	findTheMaxValueChallange()
+	mapsBasic()
+}
+
+func mapsBasic()  {
+	stocks := map[string]float64{
+		"AMAZON": 2084.98,
+		"GOOGLE": 2540.85,
+		"MICROSOFT": 287.70, // MUST havé trailing comma in multi line
+	}
+
+	// number of items
+	fmt.Println(len(stocks))
+
+	// get a value
+	fmt.Println(stocks["MICROSOFT"])
+
+	// get zero value if not found
+	fmt.Println(stocks["TESLA"])
+
+	// use two value to see if found
+	value, ok := stocks["TESLA"]
+	fmt.Println(value)
+	fmt.Println(ok)
+
+	if !ok {
+		fmt.Println("TESLA not found")
+	}else {
+		fmt.Println(value)
+	}
+
+	// set
+	stocks["TESLA"] = 822.12
+	fmt.Println(stocks)
+
+	// delete
+	delete(stocks, "AMAZON")
+	fmt.Println(stocks)
+
+	// for range (key,value)
+	for key, v := range stocks {
+		fmt.Print(key + " ")
+		fmt.Println(v)
+	}
+
 }
 
 func findTheMaxValueChallange()  {
