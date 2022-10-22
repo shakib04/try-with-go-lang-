@@ -5,7 +5,31 @@ import "fmt"
 //import "rsc.io/quote"
 
 func main() {
-	slice()
+	findTheMaxValueChallange()
+}
+
+func findTheMaxValueChallange()  {
+	nums := []int{16, 8, 42, 4, 23, 15}
+
+	// write a sorting algorithm
+	// bubble sort
+	anySwapNeed := true
+
+	for anySwapNeed {
+		anySwapNeed = false
+		for i := 0; i < len(nums) - 1; i++ {
+			current := nums[i]
+			next := nums[i + 1]
+			if current > next {
+				nums[i] = next
+				nums[i+1] = current
+				anySwapNeed = true
+			}
+		}
+	}
+
+	fmt.Println(nums[len(nums) - 1])
+
 }
 
 func slice()  {
