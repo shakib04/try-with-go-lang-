@@ -1,18 +1,30 @@
 package main
 
 import "fmt"
+import "strings"
 
 //import "rsc.io/quote"
 
 func main() {
-	mapsBasic()
+	mapsChallange()
 }
 
 // count how many times each word appears in a text. This is a very basic step in many text processing alogirthms.
 // To split text to words, use the "Fields" fuction from the "strings" package
+// also use toLower from the same package to convert all words to lowercase
+// and finally, print the map
 
 func mapsChallange()  {
-	
+
+	text := 
+	`Hi, Spring fans! In this installment, 
+	Josh Long (@starbuxma) talks to his friend, Microsoft’s Asir Selvasingh (@asirselvasingh), 
+	about Azure Spring Apps, Java at Microsoft, Spring, application security, and more. 
+	Want to learn more? Join us at SpringOne (6-8 December 2022)!
+	`
+
+	fmt.Println(text)
+
 }
 
 
