@@ -9,7 +9,8 @@ func main() {
 	mapsChallange()
 }
 
-// count how many times each word appears in a text. This is a very basic step in many text processing alogirthms.
+// count how many times each word appears in a text. 
+		//This is a very basic step in many text processing alogirthms.
 // To split text to words, use the "Fields" fuction from the "strings" package
 // also use toLower from the same package to convert all words to lowercase
 // and finally, print the map
@@ -17,13 +18,33 @@ func main() {
 func mapsChallange()  {
 
 	text := 
-	`Hi, Spring fans! In this installment, 
+	`Hi, Spring Spring Spring fans! In this installment, 
 	Josh Long (@starbuxma) talks to his friend, Microsoft’s Asir Selvasingh (@asirselvasingh), 
 	about Azure Spring Apps, Java at Microsoft, Spring, application security, and more. 
 	Want to learn more? Join us at SpringOne (6-8 December 2022)!
 	`
 
-	fmt.Println(text)
+	//fmt.Println(text)
+
+	sliceOfString := strings.Fields(text)
+	//fmt.Println(strings.Count(text, "Spring"))
+
+	wordCount :=  map[string]int32{}
+
+	for _, v := range sliceOfString {
+		value, ok := wordCount[v]
+		if ok {
+			wordCount[v] = value + 1;
+		}else {
+			wordCount[v] = 1;
+		}
+	}
+
+	for k, v := range wordCount {
+		fmt.Printf("%v -> %v\n", v, k)
+	}
+
+	//fmt.Println(wordCount)
 
 }
 
